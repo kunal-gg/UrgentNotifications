@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:its_urgent/contact_list.dart';
-import 'package:its_urgent/home.dart';
 
 void main() {
   runApp(const MyApp());

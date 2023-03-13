@@ -2,8 +2,6 @@ import 'dart:convert';
 import 'package:flutter_dnd/flutter_dnd.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 
 class Home extends StatefulWidget {
@@ -54,8 +52,8 @@ void init(){
 }
 
 void sendNotif(String playerId, String message) async{
-  final appId = '684fdcc7-0b8c-439c-a654-84424caa4ebb';
-  final restApiKey = 'NmJiOGU1YmUtZTMxYS00ZjgzLTk2MGMtZGFiM2QyNGJjMWM3';
+  const appId = '684fdcc7-0b8c-439c-a654-84424caa4ebb';
+  const restApiKey = 'NmJiOGU1YmUtZTMxYS00ZjgzLTk2MGMtZGFiM2QyNGJjMWM3';
 
   final url = Uri.parse('https://onesignal.com/api/v1/notifications');
   final headers = {
@@ -69,7 +67,7 @@ void sendNotif(String playerId, String message) async{
     'data': {'key': 'value'},
   });
 
-  final response = await http.post(url, headers: headers, body: body);
+  await http.post(url, headers: headers, body: body);
 }
 
 

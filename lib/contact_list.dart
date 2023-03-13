@@ -1,8 +1,6 @@
+import 'dart:developer';
 import 'package:contacts_service/contacts_service.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:its_urgent/home.dart';
 import 'package:its_urgent/sendNotifDialog.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -26,7 +24,7 @@ class _ContactListState extends State<ContactList> {
     if(await Permission.contacts.isGranted) {
       fetchContacts();
     }else{
-      print("this command ran");
+      log("this command ran");
       await Permission.contacts.request();
     }
   }
@@ -97,6 +95,6 @@ void init(){
   OneSignal.shared.setAppId('684fdcc7-0b8c-439c-a654-84424caa4ebb');
   OneSignal.shared.promptUserForPushNotificationPermission()
     .then((accepted)=>{
-      print("Accepted permission: $accepted")
+      log("Accepted permission: $accepted")
     });
 }
