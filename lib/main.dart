@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:its_urgent/contact_list.dart';
 import 'package:its_urgent/home.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home()
+      home: ContactList()
     );
   }
 }

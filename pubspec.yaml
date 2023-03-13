@@ -38,6 +38,8 @@ dependencies:
   onesignal_flutter: ^3.5.0
   http: ^0.13.5
   flutter_dnd: ^0.1.4+1
+  contacts_service: ^0.6.3
+  permission_handler: ^10.2.0
 
 dev_dependencies:
   flutter_test:
